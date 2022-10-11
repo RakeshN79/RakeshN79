@@ -1,0 +1,41 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+import java.util.Scanner;
+class armstrong_number 
+{
+	public static void main(String[]args)
+	{
+		int num=12;
+		int temp= num;
+		int count=0;
+		int sum=0;
+		while (num!=0)
+		{
+			count++;
+			num=num/10;
+
+		}
+		System.out.println(count);
+		num=temp;
+		while (num!=0)
+		{
+		    int last=0;
+		    int power=1;
+		    for (int i=1;i<=count;i++)
+		    {
+		       last=num%10;
+		       power=power*last;
+		    }
+		    num=num/10;
+		    sum=sum+power;
+		    
+		}
+		System.out.println(sum);
+		
+		
+}
+
+}
+
+		
