@@ -1,0 +1,44 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.Scanner;
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner scan=new Scanner(System.in);
+        int a=scan.nextInt();
+      int count=0;
+      int prime=1;
+      
+      while(prime<100)
+      {
+          int count2=0;
+          int prime2=1;
+          while(prime2<100)
+          {
+              if(prime%prime2==0)
+              {
+                 count2++;
+              }
+              prime2++;
+              // System.out.println(prime2);
+              
+          }
+          if(count2==2)
+          {
+              count++;
+              if(count==a)
+              {
+                  System.out.println(prime);
+              }
+          }
+          
+          prime++;
+         
+      }
+      
+      
+       
+       
+       
+       
+    }
+}
