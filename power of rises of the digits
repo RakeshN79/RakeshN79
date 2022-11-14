@@ -1,0 +1,38 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.Scanner;
+class HelloWorld {
+    public static void main(String[] args) {
+       // Scanner scan=new Scanner(System.in);
+        int num=2324;
+        int temp=num;
+       int count=0;
+       int sum=1;
+       int total=0;
+       int lastdigit=0;
+       while(num!=0)
+       {
+           count++;
+           num=num/10;
+       }
+      num=temp;
+      int count2=count;
+      while(num!=0)
+      {
+          lastdigit=num%10;
+          while(count!=0)
+          {
+              sum=sum*lastdigit;
+              count--;
+             
+          }
+          total=total+sum;
+          num=num/10;
+         count=count2; 
+         System.out.println(total);
+          
+      }
+       
+       
+    }
+}
