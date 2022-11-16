@@ -1,0 +1,39 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.Scanner;
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner scan=new Scanner(System.in);
+        System.out.println("enter which palindram you want")
+        int num=scan.nextInt();
+        int count=0;
+        for(int i=1;i<i+1;i++)
+        {
+        int sum=0;
+        int temp=i;
+        while(i!=0)
+        {
+            int num=0;
+            num=i%10;
+            sum=(sum*10)+num;
+            i=i/10;
+        }
+        i=temp;
+         
+        if(sum==i)
+        {
+           
+          count++; 
+          
+         
+        }
+        if(count==num)
+        {
+             System.out.println(i);
+             break;
+        }
+        
+        }
+       
+    }
+}
