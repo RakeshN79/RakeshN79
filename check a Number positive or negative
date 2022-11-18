@@ -1,0 +1,22 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.Scanner;
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner scan=new Scanner(System.in);
+        int num=scan.nextInt();
+        int temp=num;
+      if(num>0)
+      {
+         System.out.println("positive Number"); 
+      }
+      else if(num==0)
+      {
+          System.out.println("zero Number");
+      }
+      else
+      {
+          System.out.println("negative number");
+      }
+    }
+}
