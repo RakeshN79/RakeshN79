@@ -1,0 +1,17 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.Scanner;
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner scan=new Scanner(System.in);
+        char c=scan.next().charAt(0);
+       if((c=='a')||(c=='A')||(c=='E')||(c=='e')||(c=='o')||(c=='O')||(c=='E')||(c=='e'))
+       {
+           System.out.println(c+"vowel");
+       }
+       else
+       {
+           System.out.println(c+ " "+"not vowel");
+       }
+    }
+}
