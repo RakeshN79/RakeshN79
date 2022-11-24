@@ -1,0 +1,22 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("MAIN STRAT EXECUTION ");
+        System.out.println("MAIN END EXECUTION");
+         walk();
+         
+    }
+    public static void walk()
+    {
+        // HelloWorld hello=new HelloWorld();
+         run();
+         System.out.println("the walk methode will be executed");
+        
+    }
+    public static void run()
+    {
+        System.out.println("the run methode will be executed");
+    }
+}
