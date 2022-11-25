@@ -1,0 +1,31 @@
+import java.util.Scanner;
+class Hostal1
+  {
+   public void food()
+    {
+         System.out.println("food is ready for eating");
+      }
+      public static void washTheCloth()
+      {
+        System.out.println("the cloths are ready for washing");
+        }
+            public static void main(String[]args)
+           {
+            Scanner scan=new Scanner(System.in);
+              System.out.println("the main start to ");
+              int num=scan.nextInt();
+             if(num<=0)
+                  {
+                    System.out.println("No method wii be called");
+                  }
+                     else if(num%2==0)
+                       {
+                           washTheCloth();
+                           }
+                              else
+                              {
+                             Hostal1 h=new Hostal1();
+                                    h.food();
+                        }
+                }
+        }
