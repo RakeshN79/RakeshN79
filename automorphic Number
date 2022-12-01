@@ -1,0 +1,53 @@
+class AutomorphicNumber 
+{
+	public static int sqr;
+	public static int count;
+	public static void checkIt(int number)
+	{
+		int lastdigit=0;
+        sqr=square(number);
+	     count = getcount(sqr);
+         if(count==3)
+		{
+          lastdigit=sqr%100;
+		}
+		else if(count==2)
+		{
+           lastdigit=sqr%10;
+		}
+		else
+		{
+			System.out.println("your enter digit is more than three digits");
+		}
+       System.out.println(lastdigit);
+	   if(lastdigit==number)
+		{
+		   System.out.println("AutomorphicNumber");
+		}
+		else
+		{
+			System.out.println("not AutomorphicNumber");
+		}
+	}
+	public static int square(int number)
+	{
+		int sqr=number*number;
+		return sqr;
+	}
+	public static int getcount(int sqr)
+	{
+        while(sqr!=0)
+		{
+			count++;
+			sqr=sqr/10;
+		}
+		
+		return count;
+		
+
+	}
+	public static void main(String[] args) 
+	{
+		checkIt(25);
+	}
+}
