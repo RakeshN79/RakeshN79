@@ -1,0 +1,32 @@
+class ProveTheFormula 
+{
+	public static void compareTwoEquation(int num,int num1)
+	{
+         int lhs=lhsSide(num,num1);
+		 int rhs=rhsSide(num,num1);
+		 //System.out.println(rhs);
+		 int result=lhs.compareTo(rhs);
+		if(result==0)
+		{
+			 System.out.println("the formula is proved :"+lhs+"="+rhs);
+		}
+		else
+		{
+			 System.out.println("the formula is Not proved :"+lhs+"!="+rhs);
+		}
+	}
+	public static int lhsSide(int num,int num1)
+	{
+		int result=((num*num)+(num1*num1));
+		return result;
+	}
+	public static int rhsSide(int num,int num1)
+	{
+		int result=(num*num)+(num1*num1)+2*(num*num1)-2*(num*num1);
+		return result;
+	}
+	public static void main(String[] args) 
+	{
+		compareTwoEquation(5,5);
+	}
+}
