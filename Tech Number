@@ -1,0 +1,29 @@
+class TechNumber 
+{
+	public static int num=2025;
+	public static void findTechNum(int num1) 
+	{
+		TechNumber obj=new TechNumber();
+		int square=obj.findTechNum1(num1);
+		if(square==num)
+		{
+			System.out.println("it is Tech number");
+		}
+		else 
+		{
+			System.out.println("Not a Tech Number");
+		}
+	}
+     public  int findTechNum1(int num2)
+	{
+        int i=num2%100;
+		num2=num2/100;
+		int square=(i+num2)*(i+num2);
+		return square;
+	}
+
+	public static void main(String[] args) 
+	{
+		findTechNum(num);
+	}
+}
