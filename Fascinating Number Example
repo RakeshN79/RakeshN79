@@ -1,0 +1,70 @@
+import java.util.Scanner;
+class DemoJava 
+{
+	public static String str;
+	public static void findsquare(int num1)
+	{
+	     int num=num1*1;
+		int num2=num1*2;
+		int num3=num1*3;
+		str=num+""+num2+num3;
+          charAt(str);
+	}
+	public static void charAt(String s)
+	{
+		char ch;
+		char ch1;
+		int count=0;
+     for (int i=0;i<s.length();i++ )
+     {
+       ch=s.charAt(i);
+	   for (int j=0;j<s.length();j++ )
+	   {
+		   ch1=s.charAt(j);
+		  
+		  if (ch==ch1)
+		  {
+            count++;
+		  }  
+	   }
+	  
+     }
+	 
+	   if(count==s.length())
+		{
+           System.out.println(" Fascinating Numbers");
+		}
+		else
+		{
+			System.out.println("Not  Fascinating Numbers");
+		
+		}
+		
+
+	}
+	public static void main(String[] args) 
+	{      
+		int count=0;
+		Scanner scan=new Scanner(System.in);
+		int num=scan.nextInt();
+		int temp=num;
+		while(temp!=0)
+		{
+			int last=0;
+			last=num%10;
+			count++;
+			temp=temp/10;
+		}
+		if(count>=3)
+		{
+            findsquare(num);
+		}
+		else
+		{
+			System.out.println("The given Number is Not a"+num+" fascited Number");
+		}
+		
+
+		
+	}
+}
