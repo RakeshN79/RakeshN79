@@ -1,0 +1,32 @@
+import java.util.*;
+class Keith Number 
+{
+      
+	public static void main(String []args)
+	{
+			int num=742;
+			int last1=0;
+			int last2=0;
+			int last3=0;
+			int sum=0;
+          	if (num!=0)
+			{
+                last1=num/100;
+				last2=(num/10)%10;
+				last3=num%10;
+			}
+			
+			for (int i=1;i<num;i++ )
+			{
+				sum=last1+last2+last3;
+				System.out.println(sum);
+				if (sum==num)
+				{
+					break;
+				}
+			    last1=last2;
+				last2=last3;
+				last3=sum;
+			}
+	}
+}
