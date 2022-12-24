@@ -1,0 +1,63 @@
+import java.util.Arrays;
+import java.util.Scanner;
+class MainClass10
+{
+	public static void main(String[]args)
+	{
+		Scanner scan=new Scanner(System.in);
+		int num=scan.nextInt();
+		int temp=num;
+		int count =0;
+		int size=0;
+		int s=0;
+		while (temp!=0)
+		{                /*the size of an array will be based on how many element present in Number*/
+			count++;
+			temp=temp/10;
+		}
+		int a[]=new int [count];
+		for (int i=0;i<count ;i++ )
+		{
+			a[i]=num%10;
+			num=num/10;
+		}
+		for (int j=0;j<a.length ;j++ )
+		{
+			int count2=0;
+			for (int k=1;k<=a[j] ;k++ )
+			{
+             if (a[j]%k==0)
+             {
+               count2++;
+             }
+			}
+			if (count2==2)
+			{                 /*we can take another Array but size of new Array will be Number Element present in Array*/
+				 size++;
+				
+			}
+		}
+		int c[]=new int[size];
+		int temp1=0;
+		for (int j=0;j<a.length ;j++ )
+		{
+			int count2=0;
+			for (int k=1;k<=a[j] ;k++ )
+			{
+             if (a[j]%k==0)
+             {
+               count2++;
+             }
+			}
+			if (count2==2)
+			{
+				c[temp1]=a[j];
+				temp1++;
+				
+			}
+		}
+		Arrays.sort(c);/*we can import the Arrays class directly*/
+		System.out.println("The Smallest element in An Array is:"+c[0]);
+		System.out.println("the largest element in array is :"+c[c.length-1]);  
+	}
+}
