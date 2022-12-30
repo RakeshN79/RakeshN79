@@ -1,0 +1,42 @@
+class OddDigits
+{
+	public void display()
+	{
+		for (int i=1;i<i+1 ;i++ )
+		{
+			int temp=i;
+			int reverse=0;
+			int count=0;
+			while (i!=0)
+			{
+				int lastdigit=0;
+                 lastdigit =i%10;
+				 reverse=(reverse*10)+lastdigit;
+				 count++;
+				 i=i/10;
+			}
+			i=temp;
+			if (i==reverse)
+			{
+				
+				if (count==4)
+				{
+					break;
+				}
+				System.out.println(i);
+				
+			}
+		}
+	}
+}
+class MainClass4
+{
+ public static void main(String []args)
+	{
+         OddDigits obj=new OddDigits();
+		 obj.display();
+
+	     
+	  }
+	
+}
