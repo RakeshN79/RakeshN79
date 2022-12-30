@@ -1,0 +1,58 @@
+class OddDigits
+{
+	public void display()
+	{
+		int count2=0;
+		int temp=0;
+		int sum=0;
+		for (int i=1;i<=i+1 ;i++ )
+		{
+			int count =0;
+			for (int j=1;j<=i ;j++)
+			{
+				if (i%j==0)
+				{
+					count++;//find it is prime or Not
+				}
+			}
+			if (count==2)
+			{
+				count2++;
+					if (count2==10)
+					{
+					temp=i;//taking exact 10 prime Nmuber and the value in loacal variable
+					break;
+					}
+			}
+			
+		}
+		for (int j=1;j<temp ;j++ )
+		{   
+
+			if (temp%j==0)//find prefect Number or Not
+			{
+              sum=sum+j;
+			}
+		}
+		if (temp==sum)
+		{
+			System.out.println("it is a prefect Nmuber............"+temp);
+		}
+		else
+		{
+			System.out.println("not prefect Number............."+temp);
+		}
+
+	}
+}
+class MainClass4
+{
+ public static void main(String []args)
+	{
+         OddDigits obj=new OddDigits();
+		 obj.display();
+
+	     
+	  }
+	
+}
